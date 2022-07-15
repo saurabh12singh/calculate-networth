@@ -15,7 +15,7 @@ import com.cognizant.calculateNetworth.model.AuthResponse;
  * properties file of the service to whom we wants to communicate.
  * 
  */
-@FeignClient(name = "authorization-service", url = "http://localhost:9095")
+@FeignClient(name = "authorization-service", url = "authpod5.us-west-2.elasticbeanstalk.com")
 public interface AuthClient {
 	/**
 	 * This method will verify whether the token is valid or expired.
