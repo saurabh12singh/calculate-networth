@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.cognizant.calculateNetworth.model.StockDetails;
 
-@FeignClient(name="ShareDetailsService",url="http://portfpod5.us-west-2.elasticbeanstalk.com ")
+@FeignClient(name="ShareDetailsService",url="http://portfpod5.us-west-2.elasticbeanstalk.com")
 public interface ShareDetailsFiegnProxy {
 	
 	@GetMapping("/dailyallshareprice")
