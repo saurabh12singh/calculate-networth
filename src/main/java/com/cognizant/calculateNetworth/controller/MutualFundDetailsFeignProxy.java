@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.cognizant.calculateNetworth.model.MutualFundDetails;
 
-@FeignClient(name="DailyMutualFundService",url="http://mutualpract.us-west-2.elasticbeanstalk.com")
+@FeignClient(name = "DailyMutualFundService", url = "http://mutualpract.us-west-2.elasticbeanstalk.com")
 public interface MutualFundDetailsFeignProxy {
 	
 	@GetMapping("/dailyallmutualfundnav")
