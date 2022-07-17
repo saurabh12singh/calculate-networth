@@ -22,7 +22,7 @@ import com.cognizant.calculateNetworth.service.AssetService;
 import com.cognizant.calculateNetworth.service.SellAssetService;
 
 @RestController
-@CrossOrigin("http://mfpe-portfolio-pod5.s3-website-us-west-2.amazonaws.com")
+@CrossOrigin("http://mfpe-project.s3-website-us-west-2.amazonaws.com")
 public class StocksContoller {
 
 	@Autowired
