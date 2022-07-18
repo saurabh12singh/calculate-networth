@@ -8,22 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.cognizant.calculateNetworth.model.AuthResponse;
 
 
-/**
- * This interface communicates with authorization service to verify the token.
- * It takes the url of the service to whom we wants to communicate and the name
- * attribute in annotation FeignClient must be the name we have specified in the
- * properties file of the service to whom we wants to communicate.
- * 
- */
+
 @FeignClient(name = "authorization-service", url = "http://authpod5.us-west-2.elasticbeanstalk.com")
 public interface AuthClient {
-	/**
-	 * This method will verify whether the token is valid or expired.
-	 * 
-	 * @param token
-	 * @return An object of type AuthResponse which has fields userid, username and
-	 *         isValid.
-	 */
 	@RequestMapping(value = "/validate", method = RequestMethod.GET)
 	public AuthResponse getValidity(@RequestHeader("Authorization") String token);
 
